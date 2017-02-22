@@ -1,9 +1,16 @@
 var pigLatin = function(userInput) {
-  if(userInput === "a" || userInput === "e"|| userInput === "i" || userInput === "o" || userInput === "u" || userInput === "A" || userInput === "E" || userInput === "I" || userInput === "O" || userInput === "U") {
-    return userInput + "ay";
+  var arrayInput = userInput.split("");
+  var result = "";
+
+  if (arrayInput[0] === "a" || arrayInput[0] === "e"|| arrayInput[0] === "i" || arrayInput[0] === "o" || arrayInput[0] === "u" || arrayInput[0] === "A" || arrayInput[0] === "E" || arrayInput[0] === "I" || arrayInput[0] === "O" || arrayInput[0] === "U") {
+    // return userInput + "ay";
+    console.log(arrayInput);
+    arrayInput.push(arrayInput.shift(), "a", "y");
+    result = arrayInput.join("");
   } else {
-    return userInput;
+    result = arrayInput.join("");
   }
+  return result;
 };
 
 $(document).ready(function() {
