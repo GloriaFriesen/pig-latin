@@ -1,5 +1,9 @@
 var pigLatin = function(userInput) {
-  return userInput;
+  if(userInput === "a" || userInput === "e"|| userInput === "i" || userInput === "o" || userInput === "u") {
+    return userInput + "ay";
+  } else {
+    return userInput;
+  }
 };
 
 $(document).ready(function() {
