@@ -1,5 +1,5 @@
 var pigLatin = function(userInput) {
-  if(userInput === "a" || userInput === "e"|| userInput === "i" || userInput === "o" || userInput === "u") {
+  if(userInput === "a" || userInput === "e"|| userInput === "i" || userInput === "o" || userInput === "u" || userInput === "A" || userInput === "E" || userInput === "I" || userInput === "O" || userInput === "U") {
     return userInput + "ay";
   } else {
     return userInput;
