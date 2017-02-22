@@ -1,16 +1,22 @@
 var pigLatin = function(userInput) {
   var arrayInput = userInput.split("");
-  var result = "";
+  var array = [];
+  var vowel = "";
+  var consonant = "";
 
-  if (arrayInput[0] === "a" || arrayInput[0] === "e"|| arrayInput[0] === "i" || arrayInput[0] === "o" || arrayInput[0] === "u" || arrayInput[0] === "A" || arrayInput[0] === "E" || arrayInput[0] === "I" || arrayInput[0] === "O" || arrayInput[0] === "U") {
-    // return userInput + "ay";
-    console.log(arrayInput);
-    arrayInput.push(arrayInput.shift(), "a", "y");
-    result = arrayInput.join("");
+
+  for (var i=0; i < userInput.length; i++)
+  if (userInput.charAt(i) === "a" || userInput.charAt(i) === "e"|| userInput.charAt(i) === "i" || userInput.charAt(i) === "o" || userInput.charAt(i) === "u" || userInput.charAt(i) === "A" || userInput.charAt(i) === "E" || userInput.charAt(i) === "I" || userInput.charAt(i) === "O" || userInput.charAt(i) === "U") {
+
+    var vowel = userInput.slice(i, userInput.length);
+
+    i = userInput.length;
   } else {
-    result = arrayInput.join("");
+    array.push(userInput.charAt(i));
   }
-  return result;
+
+  consonant = array.join("");
+  return vowel + consonant + "ay";  //strap -- "ap" + "str" + "ay"
 };
 
 $(document).ready(function() {
