@@ -12,11 +12,15 @@ var pigLatin = function(userInput) {
 
     i = userInput.length;
   } else if (userInput.charAt(i) === "q" || userInput.charAt(i) === "Q") {
-    if(userInput.charAt(i+1) === "u" || userInput.charAt(i) === "U") {
-      array.push(userInput.charAt(i));
-      array.push(userInput.charAt(i+1));
-      i++;
-    }
+      if(userInput.charAt(i+1) === "u" || userInput.charAt(i) === "U") {
+        array.push(userInput.charAt(i));
+        array.push(userInput.charAt(i+1));
+        i++;
+      }
+  } else if ((userInput.charAt(i) === "y" || userInput.charAt(i) === "Y") && (userInput.charAt(0) !== "y" && userInput.charAt(0) !== "Y")) {
+    var vowel = userInput.slice(i, userInput.length);
+
+    i = userInput.length;
   } else {
     array.push(userInput.charAt(i));
   }
